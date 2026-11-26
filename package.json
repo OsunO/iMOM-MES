@@ -17,7 +17,7 @@
   },
   "homepage": "https://www.npmjs.com/package/dsh-plugin-imom-mes",
   "bugs": {
-    "url": "https://github.com/OsunO/dsh-plugin-imom-mes/issues"
+    "url": "https://github.com/OsunO/iMOM-MES/issues"
   },
   "type": "module",
   "main": "lib/index.mjs",
