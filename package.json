@@ -1,0 +1,59 @@
+{
+  "name": "dsh-plugin-imom-mes",
+  "version": "26.4.1",
+  "description": "卡奥斯 COSMOPlat 工业互联网平台旗下产品，深度对接卡奥斯 COSMO-iMOM 孪生制造一体化平台生产执行能力，打通车间生产、设备、质检全链路核心数据，构筑生产现场数字化可视底座，支撑制造业务精益管控与智能研判。",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "mcp",
+    "mes",
+    "mom",
+    "streamable-http"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsunO/iMOM-MES.git"
+  },
+  "homepage": "https://www.npmjs.com/package/dsh-plugin-imom-mes",
+  "bugs": {
+    "url": "https://github.com/OsunO/dsh-plugin-imom-mes/issues"
+  },
+  "type": "module",
+  "main": "lib/index.mjs",
+  "files": [
+    "lib/index.mjs",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "README.md",
+    "icon.svg"
+  ],
+  "exports": {
+    ".": "./lib/index.mjs",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
